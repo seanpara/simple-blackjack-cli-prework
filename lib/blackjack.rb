@@ -1,9 +1,5 @@
-##################
-# shared methods #
-##################
-
 def welcome
-  # code #welcome here
+  puts "Welcome to the Blackjack Table"
 end
 
 def deal_card
@@ -14,25 +10,14 @@ def display_card_total(card_total)
   puts "Your cards add up to #{card_total}"
 end
 
-
-##########
-# rounds #
-##########
-
-def welcome
-  puts "Welcome to the Blackjack Table"
-end
-
-
 def prompt_user
   puts "Type 'h' to hit or 's' to stay"
 end
 
-
 def initial_round
-  first_round = deal_card + deal_card
-  display_card_total(first_round)
-  return first_round
+  initial_sum = deal_card + deal_card
+  display_card_total(initial_sum)
+  return initial_sum
 end
 
 def get_user_input
